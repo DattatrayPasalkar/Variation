@@ -1,0 +1,29 @@
+Replace all 0's with 5 
+You are given an integer N. You need to convert all zeroes of N to 5.
+Input:
+N = 1004
+Output: 1554
+
+RestrictedKeyWordsInCode: "
+
+
+import java.util.*;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n = 700206;
+		myCode(n);
+	}
+	//EndOfMainMethod
+	public static void myCode(int num) 
+	{
+		String a = String.valueOf(num);
+		String b = a.replace('0', '5');
+		Integer z=Integer.parseInt(b);
+		System.out.println(z);
+	}
+}
+
+output:  755256
