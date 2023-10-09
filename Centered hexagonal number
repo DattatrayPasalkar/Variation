@@ -1,0 +1,46 @@
+Given a number N and the task is to find Nth centered hexagonal number. Also, find the Centered hexagonal series.
+Examples: 
+ 
+
+Input: N = 2 
+Output: 7
+Input: N = 10 
+Output: 271 
+ 
+
+Centered Hexagonal Numbers – The Centered Hexagonal numbers are figurate numbers and are in the form of the Hexagon. The Centered Hexagonal number is different from Hexagonal Number because it contains one element at the center.
+Some of the Central Hexagonal numbers are – 
+ 
+
+1, 7, 19, 37, 61, 91, 127, 169 ..
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n = 10;
+		myCode(n);
+	}
+	//EndOfMainMethod
+	private static void myCode(int n)
+	{
+		for (int i = 1; i <= n; i++)  
+		{
+			if (n == 1) 
+			{
+				System.out.println("-1");
+			}
+			else
+			{
+				System.out.println(1 + 6 * ((n - 1) * n / 2));
+				break;
+			}
+		}
+	}
+}
+
+Expected Output:
+10th centered hexagonal number: 271
+
+
