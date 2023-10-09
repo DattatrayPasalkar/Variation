@@ -1,0 +1,25 @@
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n =3;
+		int k = 2;
+		myCode(n,k);
+	}
+	//EndOfMainMethod
+	public static void myCode(int n, int k) 
+	{
+		if (n == 1) 
+		{
+			System.out.println("1");
+		}
+		else 
+		{
+			System.out.println(((n-k)+k-1) % n + 1);
+		}
+	}
+}
+
+  output : 3
+
