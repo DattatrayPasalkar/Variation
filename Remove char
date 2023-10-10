@@ -1,0 +1,43 @@
+Write a Java program to create a new string after removing a specified character from a given string except the very first and last position.
+The given string is: zebrazone
+char ch='z';
+The new string is: zebraone
+
+i/p : String str1 =  "ohefoshioneo";
+		 char ch = 'o';
+o/p :  The given string is: ohefoshioneo
+The new string is: ohefshineo
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String str1 =  "zebrazone";
+		char ch = 'o';
+		myCode(str1,ch);
+	}
+	//EndOfMainMethod
+	public static void myCode(String  s1,char ch) 
+	{
+		System.out.println("The given string is: "+s1);
+		String s3="";
+		for (int i = 0; i < s1.length(); i++) 
+		{
+			int count=0;
+			if(s1.charAt(i)==ch) 
+			{
+				count++;
+			}
+			if(count==0)
+			s3+=s1.charAt(i);
+		}
+		System.out.println("The new string is: "+s3);
+		System.out.println(s3);
+	}
+}
+
+output ;The given string is: zebrazone
+The new string is: zebrazne
+
+
