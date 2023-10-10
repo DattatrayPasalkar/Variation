@@ -1,0 +1,28 @@
+Given a string str, the task is to remove all non-alphanumeric characters from it and print the modified it. 
+Examples: 
+
+Input: @!Geeks-for’Geeks,123 
+Output: GeeksforGeeks123 
+Explanation: at symbol(@), exclamation point(!), dash(-), apostrophes(‘), and commas(, ) are removed.
+
+import java.util.*;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		//Given string str"Geeks_for$ Geeks?
+		String str = "abc45";
+		myCode(str);
+	}
+	//EndOfMainMethod
+	private static void myCode(String str)
+	{
+		String a=str.replaceAll("[^a-zA-Z0-9]","");
+		System.out.println(a);
+	}
+}
+
+output abc45
+
+
