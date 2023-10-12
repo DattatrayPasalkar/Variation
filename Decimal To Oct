@@ -1,0 +1,43 @@
+Program To Convert Decimal To Octal
+Input: int dec =12345;
+
+Output:Oct number is : 
+30071
+
+public class MyClass 
+{
+	static int i=1;
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int dec =12345;
+		myCode(dec);
+	}
+	//EndOfMainMethod
+	private static void myCode(int dec)
+	{
+		String octal = convertToOctal(dec);
+		System.out.println("Oct number is: " + octal);
+	}
+	public static String convertToOctal(int dec) 
+	{
+		if (dec == 0) 
+		{
+			return "0";
+		}
+		StringBuilder octal = new StringBuilder();
+		while (dec != 0) 
+		{
+			int remainder = dec % 8;
+			octal.insert(0, remainder); 
+			dec /= 8;
+		}
+		return octal.toString();
+	}
+}
+
+output 
+Oct number is : 
+30071
+
+
