@@ -1,0 +1,38 @@
+Given a Binary Number B, find its decimal equivalent.
+ 
+
+Example 1:
+
+Input: B = 10001000
+Output: 136
+Example 2:
+
+Input: B = 101100
+Output: 44
+ 
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String b = "10001000";
+		myCode(b);
+	}
+	//EndOfMainMethod
+	public static void myCode(String b) 
+	{
+		int decimal=0;
+		for (int i = 0; i <b.length(); i++) 
+		{
+			char ch = b.charAt(i);
+			int digitValue = Character.getNumericValue(ch);
+			decimal = (decimal << 1) | digitValue;
+		}
+		System.out.println(decimal);
+	}
+}
+output 36
+
+
+
