@@ -1,0 +1,43 @@
+Write a program to convert a hash set to an array.and return array.
+
+
+import java.util.*;
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		HashSet<Integer> hs=new HashSet<Integer>();
+		hs.add(10);
+		hs.add(20);
+		hs.add(30);
+		hs.add(40);
+		hs.add(50);
+		hs.add(60);
+		int[] a=new int[hs.size()];
+		a=myCode(hs,a);
+		System.out.println(Arrays.toString(a));
+	}
+	//EndOfMainMethod
+	public static int[] myCode(HashSet<Integer> hs,int[] a) 
+	{
+		//write code here and return the new array
+		if (a.length < hs.size()) 
+		{
+			a = new int[hs.size()];
+		}
+		int index = 0;
+		for (int num : hs) 
+		{
+			a[index++] = num;
+		}
+		return a;
+	}
+}
+
+ output: [50, 20, 40, 10, 60, 30] ;
+
+
+
+
+
