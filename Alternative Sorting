@@ -1,0 +1,57 @@
+Alternative Sorting  
+Given an array arr[] of N distinct integers, output the array in such a way that the first element is first maximum and the second element is the first minimum, and so on.
+ 
+
+Example 1:
+
+Input: N = 7, arr[] = {7, 1, 2, 3, 4, 
+                                5, 6}
+Output: 7 1 6 2 5 3 4
+Explanation:The first element is first 
+maximum and second element is first 
+minimum and so on.
+
+import java.util.*;
+public class MyClass
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int arr[] = 
+		{
+			7, 1, 2, 3, 4,5, 6
+		}
+		;
+		int n = arr.length;
+		myCode(arr,n);
+	}
+	//EndOfMainMethod
+	public static void myCode(int[] a,int n) 
+	{
+		Arrays.sort(a);
+		int []b=new int[a.length];
+		int i=a.length-1;
+		int j=0;
+		int index=0;
+		while(i>j)
+		{
+			b[index++]=a[i];
+			b[index++]=a[j];
+			i--;
+			j++;
+		}
+		if(i==j)
+		{
+			b[index]=a[i];
+		}
+		for(int data:b)
+		{
+			System.out.print(data+" ");
+		}
+	}
+}'
+
+
+out put 7 1 6 2 5 3 4 
+
+
