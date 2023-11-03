@@ -1,0 +1,29 @@
+Program To Calculate Future Investment Value
+Input: double p=12;
+		 double r=13;
+		 double y=15;
+Output:value is: 75.0512445323673
+
+Node : Future Value = Present Value x (1 + Rate of Return)^Number of Years.
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		double p=12;
+		double r=13/100.0;
+		double y=15;
+		myCode(p,r,y);
+	}
+	//EndOfMainMethod
+	private static void myCode(double p,double r,double y)
+	{
+		double futureValue = p * Math.pow(1 + r, y);
+		System.out.println("Value is: " + futureValue);
+	}
+}
+
+output Value is: 75.0512445323673
+
+
