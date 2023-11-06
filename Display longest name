@@ -1,0 +1,39 @@
+Given a list of names, display the longest name.
+
+Example:
+Input:
+N = 5
+names[] = { "Hefshin", "Hefshine", "HefshineFor",
+ "HefshineForHefshine", "HefshineForHefshine" }
+Output:
+HefshineForHefshine
+public class MyClass
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String[] s=
+		{
+			"hef", "he", "hefs",
+			"hefshin", "hefshine" 
+		}
+		;
+		myCode(s);
+	}
+	//EndOfMainMethod
+	public static void myCode(String[] s) 
+	{
+		//write code here
+		String s1="";
+		for(String s2:s)
+		{
+			if(s2.length()>s1.length())
+			{
+				s1=s2;
+			}
+		}
+		System.out.println(s1);
+	}
+}
+output. hefshine
+
