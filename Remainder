@@ -1,0 +1,34 @@
+Given a Number N, the task is to find the Remainder when N is divided by R (a two digit Number). The input of the Number may be very large.
+
+Example :
+
+i/p : "5786463272369"
+o/p : 3
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		String s = "5";
+		String rem="7";
+		myCode(s,rem);
+	}
+	//EndOfMainMethod
+	public static void myCode(String s,String rem) 
+	{
+		Integer a=Integer.parseInt(rem);
+		int num=0;
+		int num2=0;
+		for(int i=0; i<s.length(); i++)
+		{
+			num=num2*10+(s.charAt(i)-48);
+			num2=num%a;
+		}
+		System.out.println(num2);
+	}
+}
+
+output ; 5
+
+
