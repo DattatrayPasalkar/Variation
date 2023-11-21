@@ -1,0 +1,43 @@
+Decimal to binary conversion without using arithmetic operators
+Find the binary equivalent of the given non-negative number n without using arithmetic operators.
+Examples: 
+ 
+
+Input : n = 10
+Output : 1010
+
+Input : n = 38
+Output : 100110
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n = 38;
+		myCode(n);
+	}
+	//EndOfMainMethod
+	private static void myCode(int n)
+	{
+		System.out.println(decimalToBinary(n));
+	}
+	public static String decimalToBinary(int n2)
+	{
+		if(n2==0)
+		{
+			return "0";
+		}
+		StringBuilder bi=new StringBuilder();
+		while(n2>0)
+		{
+			bi.insert(0,(n2 & 1));
+			n2=n2>>>1;
+		}
+		return bi.toString();
+	}
+}
+
+output 100110
+
+
